@@ -61,8 +61,8 @@ $code-text-color:       $mat-code-foreground   !default;
 $link-base-color:       $mat-blue              !default;
 $link-visited-color:    darken($mat-blue, 25%) !default;
 
-$table-text-color:      $mat-foreground        !default;
-$table-zebra-color:     $mat-light-brand       !default;
+$table-text-color:      $mat-code-foreground   !default;
+$table-zebra-color:     $mat-code-three        !default;
 $table-header-bg-color: $mat-code-background   !default;
 $table-header-border:   $mat-dark-brand        !default;
 $table-border-color:    $mat-dark-brand        !default;
