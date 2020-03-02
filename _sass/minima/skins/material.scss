@@ -39,7 +39,7 @@ $mat-mono00:   $mat-base00;
 $mat-mono01:   $mat-base01;
 
 @if $mat-is-dark {
-  $mat-mono4:  $mat-base1;
+  $mat-mono4:  $mat-base01;
   $mat-mono3:  $mat-base03;
   $mat-mono2:  $mat-base02;
   $mat-mono1:  $mat-base01;
@@ -58,6 +58,7 @@ $brand-color-dark:      $mat-mono00 !default;
 $text-color:            $mat-mono01 !default;
 $background-color:      $mat-mono3 !default;
 $code-background-color: $mat-mono2 !default;
+$code-text-color: $mat-mono2 !default;
 
 $link-base-color:       $mat-blue !default;
 $link-visited-color:    mix($mat-blue, $mat-mono00) !default;
