@@ -14,14 +14,18 @@ $mat-is-dark: false !default;
 // ------------
 // The inline comments show the canonical H*S*B values for each color.
 
-$mat-base03:   #212121;  // 00  00  13
-$mat-base02:   #2E2E2E;  // 00  00  18
-$mat-base01:   #212121;  // 00  00  13
-$mat-base00:   #212121;  // 00  00  13
-$mat-base0:    #212121;  // 00  00  13
-$mat-base1:    #EEEEEE;  // 00  00  93
-$mat-base2:    #2E2E2E;  // 00  00  18
-$mat-base3:    #EEEEEE;  // 00  00  93
+$mat-background:      #EEEEEE; // 00  00  93
+$mat-foreground:      #212121; // 00  00  13
+$mat-color-brand:     $mat-background;
+$mat-light-brand:     darken($mat-foreground, 25%);
+$mat-dark-brand:      #212121; // 00  00  13
+$mat-code-three:      darken($mat-foreground, 40%);
+$mat-code-background: #2E2E2E; // 00  00  18
+$mat-code-foreground: #EEEEEE; // 00  00  93
+
+// Colored items
+// -------------
+// The inline colors for colored text.
 $mat-yellow:   #F9EE98;  // 53  39  98
 $mat-orange:   #FFCB6B;  // 39  58 100
 $mat-red:      #F78C6C;  // 14  56  97
@@ -31,73 +35,66 @@ $mat-blue:     #89DDFF;  //197  46 100
 $mat-cyan:     #B2CCD6;  //197  17  84
 $mat-green:    #C3E88D;  // 84  39  91
 
-$mat-mono4:    $mat-base01;
-
-$mat-mono3:    $mat-base3;
-$mat-mono2:    $mat-base2;
-$mat-mono1:    $mat-base1;
-$mat-mono00:   $mat-base00;
-$mat-mono01:   $mat-base01;
-
 @if $mat-is-dark {
-  $mat-mono3:  $mat-base03;
-  $mat-mono2:  $mat-base02;
-  $mat-mono1:  $mat-base01;
-  $mat-mono00: $mat-base0;
-  $mat-mono01: $mat-base1;
+  $mat-background:      #212121; // 00  00  13
+  $mat-foreground:      #EEEEEE; // 00  00  93
+  $mat-color-brand:     $mat-background;
+  $mat-light-brand:     lighten($mat-foreground, 25%);
+  $mat-dark-brand:      darken($mat-foreground, 25%);
+  $mat-code-background: #2E2E2E; // 00  00  18
+  $mat-code-foreground: #EEEEEE; // 00  00  93
 }
-
 
 // Minima color variables
 // ----------------------
 
-$brand-color:           $mat-mono1 !default;
-$brand-color-light:     mix($mat-mono1, $mat-mono3) !default;
-$brand-color-dark:      $mat-mono00 !default;
+$brand-color:           $mat-color-brand       !default;
+$brand-color-light:     $mat-light-brand       !default;
+$brand-color-dark:      $mat-dark-brand        !default;
 
-$text-color:            $mat-mono01 !default;
-$background-color:      $mat-mono3 !default;
-$code-background-color: $mat-mono2 !default;
-$code-text-color:       $mat-mono4 !default;
+$text-color:            $mat-foreground        !default;
+$background-color:      $mat-background        !default;
+$code-background-color: $mat-code-background   !default;
+$code-text-color:       $mat-code-foreground   !default;
 
-$link-base-color:       $mat-blue !default;
-$link-visited-color:    mix($mat-blue, $mat-mono00) !default;
+$link-base-color:       $mat-blue              !default;
+$link-visited-color:    darken($mat-blue, 25%) !default;
 
-$table-text-color:      $mat-mono00 !default;
-$table-zebra-color:     mix($mat-mono2, $mat-mono3) !default;
-$table-header-bg-color: $mat-mono2 !default;
-$table-header-border:   $mat-mono1 !default;
-$table-border-color:    $mat-mono1 !default;
+$table-text-color:      $mat-foreground        !default;
+$table-zebra-color:     $mat-light-brand       !default;
+$table-header-bg-color: $mat-code-background   !default;
+$table-header-border:   $mat-dark-brand        !default;
+$table-border-color:    $mat-dark-brand        !default;
 
 
 // Syntax highlighting styles
 // --------------------------
 
 .highlight {
-  .c     { color: $mat-mono1; font-style: italic } // Comment
+  .c     { color: $mat-foreground; font-style: italic } // Comment
   .err   { color: $mat-red } // Error
-  .k     { color: $mat-mono01; font-weight: bold } // Keyword
-  .o     { color: $mat-mono01; font-weight: bold } // Operator
-  .cm    { color: $mat-mono1; font-style: italic } // Comment.Multiline
-  .cp    { color: $mat-mono1; font-weight: bold } // Comment.Preproc
-  .c1    { color: $mat-mono1; font-style: italic } // Comment.Single
-  .cs    { color: $mat-mono1; font-weight: bold; font-style: italic } // Comment.Special
+  .k     { color: $mat-light-brand; font-weight: bold } // Keyword
+  .o     { color: $mat-light-brand; font-weight: bold } // Operator
+  .cm    { color: $mat-foreground; font-style: italic } // Comment.Multiline
+  .cp    { color: $mat-foreground; font-weight: bold } // Comment.Preproc
+  .c1    { color: $mat-foreground; font-style: italic } // Comment.Single
+  .cs    { color: $mat-foreground; font-weight: bold; font-style: italic } // Comment.Special
   .gd    { color: $mat-red } // Generic.Deleted
   .gd .x { color: $mat-red } // Generic.Deleted.Specific
-  .ge    { color: $mat-mono00; font-style: italic } // Generic.Emph
+  .ge    { color: $mat-code-three; font-style: italic } // Generic.Emph
   .gr    { color: $mat-red } // Generic.Error
-  .gh    { color: $mat-mono1 } // Generic.Heading
+  .gh    { color: $mat-foreground } // Generic.Heading
   .gi    { color: $mat-green } // Generic.Inserted
   .gi .x { color: $mat-green } // Generic.Inserted.Specific
-  .go    { color: $mat-mono00 } // Generic.Output
-  .gp    { color: $mat-mono00 } // Generic.Prompt
-  .gs    { color: $mat-mono01; font-weight: bold } // Generic.Strong
-  .gu    { color: $mat-mono1 } // Generic.Subheading
+  .go    { color: $mat-code-three } // Generic.Output
+  .gp    { color: $mat-code-three } // Generic.Prompt
+  .gs    { color: $mat-light-brand; font-weight: bold } // Generic.Strong
+  .gu    { color: $mat-foreground } // Generic.Subheading
   .gt    { color: $mat-red } // Generic.Traceback
-  .kc    { color: $mat-mono01; font-weight: bold } // Keyword.Constant
-  .kd    { color: $mat-mono01; font-weight: bold } // Keyword.Declaration
-  .kp    { color: $mat-mono01; font-weight: bold } // Keyword.Pseudo
-  .kr    { color: $mat-mono01; font-weight: bold } // Keyword.Reserved
+  .kc    { color: $mat-light-brand; font-weight: bold } // Keyword.Constant
+  .kd    { color: $mat-light-brand; font-weight: bold } // Keyword.Declaration
+  .kp    { color: $mat-light-brand; font-weight: bold } // Keyword.Pseudo
+  .kr    { color: $mat-light-brand; font-weight: bold } // Keyword.Reserved
   .kt    { color: $mat-violet; font-weight: bold } // Keyword.Type
   .m     { color: $mat-cyan } // Literal.Number
   .s     { color: $mat-magenta } // Literal.String
@@ -108,11 +105,11 @@ $table-border-color:    $mat-mono1 !default;
   .ni    { color: $mat-violet } // Name.Entity
   .ne    { color: $mat-violet; font-weight: bold } // Name.Exception
   .nf    { color: $mat-blue; font-weight: bold } // Name.Function
-  .nn    { color: $mat-mono00 } // Name.Namespace
+  .nn    { color: $mat-code-three } // Name.Namespace
   .nt    { color: $mat-blue } // Name.Tag
   .nv    { color: $mat-cyan } // Name.Variable
-  .ow    { color: $mat-mono01; font-weight: bold } // Operator.Word
-  .w     { color: $mat-mono1 } // Text.Whitespace
+  .ow    { color: $mat-light-brand; font-weight: bold } // Operator.Word
+  .w     { color: $mat-foreground } // Text.Whitespace
   .mf    { color: $mat-cyan } // Literal.Number.Float
   .mh    { color: $mat-cyan } // Literal.Number.Hex
   .mi    { color: $mat-cyan } // Literal.Number.Integer
@@ -128,7 +125,7 @@ $table-border-color:    $mat-mono1 !default;
   .sr    { color: $mat-green } // Literal.String.Regex
   .s1    { color: $mat-magenta } // Literal.String.Single
   .ss    { color: $mat-magenta } // Literal.String.Symbol
-  .bp    { color: $mat-mono1 } // Name.Builtin.Pseudo
+  .bp    { color: $mat-foreground } // Name.Builtin.Pseudo
   .vc    { color: $mat-cyan } // Name.Variable.Class
   .vg    { color: $mat-cyan } // Name.Variable.Global
   .vi    { color: $mat-cyan } // Name.Variable.Instance
