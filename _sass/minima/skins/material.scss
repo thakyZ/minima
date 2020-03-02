@@ -16,7 +16,7 @@ $mat-is-dark: false !default;
 
 $mat-background:      #EEEEEE; // 00  00  93
 $mat-foreground:      #212121; // 00  00  13
-$mat-color-brand:     $mat-background;
+$mat-color-brand:     darken($mat-background, 15%);
 $mat-light-brand:     darken($mat-foreground, 25%);
 $mat-dark-brand:      #212121; // 00  00  13
 $mat-code-two:        darken($mat-foreground, 25%);
