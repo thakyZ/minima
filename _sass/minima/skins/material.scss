@@ -19,8 +19,9 @@ $mat-foreground:      #212121; // 00  00  13
 $mat-color-brand:     darken($mat-background, 40%);
 $mat-light-brand:     darken($mat-background, 25%);
 $mat-dark-brand:      #212121; // 00  00  13
-$mat-code-two:        darken($mat-foreground, 25%);
-$mat-code-three:      darken($mat-foreground, 40%);
+$mat-code-one:        $mat-background;
+$mat-code-two:        darken($mat-background, 25%);
+$mat-code-three:      darken($mat-background, 40%);
 $mat-code-background: #2E2E2E; // 00  00  18
 $mat-code-foreground: #EEEEEE; // 00  00  93
 
@@ -73,30 +74,30 @@ $table-border-color:      $mat-dark-brand               !default;
 // --------------------------
 
 .highlight {
-  .c     { color: $mat-code-foreground; font-style: italic } // Comment
+  .c     { color: $mat-code-one; font-style: italic } // Comment
   .err   { color: $mat-red } // Error
   .k     { color: $mat-code-two; font-weight: bold } // Keyword
   .o     { color: $mat-code-two; font-weight: bold } // Operator
-  .cm    { color: $mat-code-foreground; font-style: italic } // Comment.Multiline
-  .cp    { color: $mat-code-foreground; font-weight: bold } // Comment.Preproc
-  .c1    { color: $mat-code-foreground; font-style: italic } // Comment.Single
-  .cs    { color: $mat-code-foreground; font-weight: bold; font-style: italic } // Comment.Special
+  .cm    { color: $mat-code-one; font-style: italic } // Comment.Multiline
+  .cp    { color: $mat-code-one; font-weight: bold } // Comment.Preproc
+  .c1    { color: $mat-code-one; font-style: italic } // Comment.Single
+  .cs    { color: $mat-code-one; font-weight: bold; font-style: italic } // Comment.Special
   .gd    { color: $mat-red } // Generic.Deleted
   .gd .x { color: $mat-red } // Generic.Deleted.Specific
   .ge    { color: $mat-code-three; font-style: italic } // Generic.Emph
   .gr    { color: $mat-red } // Generic.Error
-  .gh    { color: $mat-code-foreground } // Generic.Heading
+  .gh    { color: $mat-code-one } // Generic.Heading
   .gi    { color: $mat-green } // Generic.Inserted
   .gi .x { color: $mat-green } // Generic.Inserted.Specific
-  .go    { color: $mat-code-foreground } // Generic.Output
-  .gp    { color: $mat-code-foreground } // Generic.Prompt
+  .go    { color: $mat-code-one } // Generic.Output
+  .gp    { color: $mat-code-one } // Generic.Prompt
   .gs    { color: $mat-code-two; font-weight: bold } // Generic.Strong
-  .gu    { color: $mat-code-foreground } // Generic.Subheading
+  .gu    { color: $mat-code-one } // Generic.Subheading
   .gt    { color: $mat-red } // Generic.Traceback
-  .kc    { color: $mat-code-foreground; font-weight: bold } // Keyword.Constant
-  .kd    { color: $mat-code-foreground; font-weight: bold } // Keyword.Declaration
-  .kp    { color: $mat-code-foreground; font-weight: bold } // Keyword.Pseudo
-  .kr    { color: $mat-code-foreground; font-weight: bold } // Keyword.Reserved
+  .kc    { color: $mat-code-one; font-weight: bold } // Keyword.Constant
+  .kd    { color: $mat-code-one; font-weight: bold } // Keyword.Declaration
+  .kp    { color: $mat-code-one; font-weight: bold } // Keyword.Pseudo
+  .kr    { color: $mat-code-one; font-weight: bold } // Keyword.Reserved
   .kt    { color: $mat-violet; font-weight: bold } // Keyword.Type
   .m     { color: $mat-cyan } // Literal.Number
   .s     { color: $mat-magenta } // Literal.String
@@ -111,7 +112,7 @@ $table-border-color:      $mat-dark-brand               !default;
   .nt    { color: $mat-blue } // Name.Tag
   .nv    { color: $mat-cyan } // Name.Variable
   .ow    { color: $mat-code-two; font-weight: bold } // Operator.Word
-  .w     { color: $mat-code-foreground } // Text.Whitespace
+  .w     { color: $mat-code-one } // Text.Whitespace
   .mf    { color: $mat-cyan } // Literal.Number.Float
   .mh    { color: $mat-cyan } // Literal.Number.Hex
   .mi    { color: $mat-cyan } // Literal.Number.Integer
@@ -127,7 +128,7 @@ $table-border-color:      $mat-dark-brand               !default;
   .sr    { color: $mat-green } // Literal.String.Regex
   .s1    { color: $mat-magenta } // Literal.String.Single
   .ss    { color: $mat-magenta } // Literal.String.Symbol
-  .bp    { color: $mat-code-foreground } // Name.Builtin.Pseudo
+  .bp    { color: $mat-code-one } // Name.Builtin.Pseudo
   .vc    { color: $mat-cyan } // Name.Variable.Class
   .vg    { color: $mat-cyan } // Name.Variable.Global
   .vi    { color: $mat-cyan } // Name.Variable.Instance
