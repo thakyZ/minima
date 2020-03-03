@@ -260,7 +260,10 @@ table {
   border: 1px solid $table-border-color;
   tr {
     &:nth-child(even) {
-      background-color: $table-zebra-color;
+      background-color: $table-zebra-color-even;
+    }
+    &:nth-child(odd) {
+      background-color: $table-zebra-color-odd;
     }
   }
   th, td {
