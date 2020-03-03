@@ -49,24 +49,24 @@ $mat-green:    #C3E88D;  // 84  39  91
 // Minima color variables
 // ----------------------
 
-$brand-color:             $mat-color-brand             !default;
-$brand-color-light:       $mat-light-brand             !default;
-$brand-color-dark:        $mat-dark-brand              !default;
+$brand-color:             $mat-color-brand              !default;
+$brand-color-light:       $mat-light-brand              !default;
+$brand-color-dark:        $mat-dark-brand               !default;
 
-$text-color:              $mat-foreground              !default;
-$background-color:        $mat-background              !default;
-$code-background-color:   $mat-code-background         !default;
-$code-text-color:         $mat-code-foreground         !default;
+$text-color:              $mat-foreground               !default;
+$background-color:        $mat-background               !default;
+$code-background-color:   $mat-code-background          !default;
+$code-text-color:         $mat-code-foreground          !default;
 
-$link-base-color:         $mat-blue                    !default;
-$link-visited-color:      darken($mat-blue, 25%)       !default;
+$link-base-color:         $mat-blue                     !default;
+$link-visited-color:      darken($mat-blue, 25%)        !default;
 
-$table-text-color:        $mat-code-foreground         !default;
-$table-zebra-color-even:  darken($mat-background, 25%) !default;
-$table-zebra-color-odd:   darken($mat-background, 45%) !default;
-$table-header-bg-color:   darken($mat-background, 75%) !default;
-$table-header-border:     $mat-dark-brand              !default;
-$table-border-color:      $mat-dark-brand              !default;
+$table-text-color:        $mat-code-foreground          !default;
+$table-zebra-color-even:  lighten($mat-foreground, 45%) !default;
+$table-zebra-color-odd:   lighten($mat-foreground, 25%) !default;
+$table-header-bg-color:   darken($mat-background, 75%)  !default;
+$table-header-border:     $mat-dark-brand               !default;
+$table-border-color:      $mat-dark-brand               !default;
 
 
 // Syntax highlighting styles
