@@ -32,7 +32,7 @@ $mat-orange:   #FFCB6B;  // 39  58 100
 $mat-red:      #F78C6C;  // 14  56  97
 $mat-magenta:  #C792EA;  //276  38  92
 $mat-violet:   #CDA869;  // 38  49  80
-$mat-blue:     #89DDFF;  //197  46 100
+$mat-blue:     #0080FF;  //197  46 100
 $mat-cyan:     #B2CCD6;  //197  17  84
 $mat-green:    #C3E88D;  // 84  39  91
 
@@ -40,8 +40,8 @@ $mat-green:    #C3E88D;  // 84  39  91
   $mat-background:      #212121; // 00  00  13
   $mat-foreground:      #EEEEEE; // 00  00  93
   $mat-color-brand:     $mat-background;
-  $mat-light-brand:     lighten($mat-foreground, 25%);
-  $mat-dark-brand:      darken($mat-foreground, 25%);
+  $mat-light-brand:     lighten($mat-background, 25%);
+  $mat-dark-brand:      darken($mat-background, 25%);
   $mat-code-background: #2E2E2E; // 00  00  18
   $mat-code-foreground: #EEEEEE; // 00  00  93
 }
